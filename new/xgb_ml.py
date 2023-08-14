@@ -3,8 +3,8 @@ from sklearn.model_selection import train_test_split
 import xgboost as xgb
 from sys import argv
 
-nbr= int(argv[1])
-file_path = argv[0]
+nbr= int(argv[2])
+file_path = argv[1]
 
 
 #part 1: getting the data from the data file
