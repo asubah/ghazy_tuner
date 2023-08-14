@@ -29,7 +29,7 @@ params = {
     'learning_rate': 0.1
 }
 
-xgb_model = xgb.train(params, data_matrix, num_boost_round=10)
+xgb_model = xgb.train(params, data_matrix, num_boost_round=nbr)
 
 xgb_dict = xgb_model.get_score(importance_type='weight')
 xgb_dict = dict(sorted(xgb_dict.items(), key=lambda item: item[1]))
@@ -39,9 +39,5 @@ xgb_dict = dict(reversed(list(xgb_dict.items())))
 
 with open(file_path + '/result.txt', 'w') as file:
 
-    file_contents = []
-
     for key in xgb_dict:
-        file_contents.append(key)
-
-    file.writelines(file_contents)
+        file.write(key + '\n')
