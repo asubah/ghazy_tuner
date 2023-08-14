@@ -29,7 +29,7 @@ params = {
     'learning_rate': 0.1
 }
 
-xgb_model = xgb.train(params, dtrain, num_boost_round=10)
+xgb_model = xgb.train(params, data_matrix, num_boost_round=10)
 
 xgb_dict = model.get_score(importance_type='weight')
 xgb_dict = dict(sorted(xgb_dict.items(), key=lambda item: item[1]))
