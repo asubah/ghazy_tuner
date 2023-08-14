@@ -39,5 +39,9 @@ xgb_dict = dict(reversed(list(xgb_dict.items())))
 
 with open(file_path + '/result.txt', 'w') as file:
 
+    file_contents = []
+
     for key in xgb_dict:
-        file.writeline(key)
+        file_contents.append(key)
+
+    file.writelines(file_contents)
