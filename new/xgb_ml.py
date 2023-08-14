@@ -37,7 +37,7 @@ xgb_dict = dict(reversed(list(xgb_dict.items())))
 
 #part 3: Exporting the data into a certain format to use later
 
-with open(file_path, 'w') as file:
+with open(file_path + 'result.txt', 'w') as file:
 
     for key in xgb_dict:
         file.writeline(key)
