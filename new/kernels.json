@@ -1,0 +1,127 @@
+{
+    "findClus": {
+        "min": 1,
+        "max": 256
+    },
+    "RawToDigi_kernel": {
+        "min": 1,
+        "max": 256
+    },
+    "kernelLineFit3": {
+        "min": 1,
+        "max": 256
+    },
+    "kernelLineFit4": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_connect": {
+        "min": 1,
+        "max": 256
+    },
+    "getHits": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_find_ntuplets": {
+        "min": 1,
+        "max": 256
+    },
+    "fishbone": {
+        "min": 1,
+        "max": 256
+    },
+    "clusterChargeCut": {
+        "min": 1,
+        "max": 256
+    },
+    "calibDigis": {
+        "min": 1,
+        "max": 256
+    },
+    "countModules": {
+        "min": 1,
+        "max": 256
+    },
+    "kernelFastFit3": {
+        "min": 1,
+        "max": 256
+    },
+    "kernelFastFit4": {
+        "min": 1,
+        "max": 256
+    },
+    "kernelFastFit5": {
+        "min": 1,
+        "max": 256
+    },
+    "kernelLineFit5": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_fillHitDetIndices": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_mark_used": {
+        "min": 1,
+        "max": 256
+    },
+    "finalizeBulk": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_earlyDuplicateRemover": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_countMultiplicity": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_fillMultiplicity": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_checkOverflows": {
+        "min": 1,
+        "max": 256
+    },
+    "initDoublets": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_classifyTracks": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_fishboneCleaner": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_fastDuplicateRemover": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_countHitInTracks": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_fillHitInTracks": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_tripletCleaner": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_doStatsForHitInTracks": {
+        "min": 1,
+        "max": 256
+    },
+    "kernel_doStatsForTracks": {
+        "min": 1,
+        "max": 256
+    }
+}
+

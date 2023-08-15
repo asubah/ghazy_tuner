@@ -25,7 +25,6 @@ xg_reg = xgb.XGBRegressor(objective ='reg:squarederror', colsample_bytree = 0.3,
 params = {
     'objective': 'reg:squarederror',  # For regression task
     'max_depth': 3,
-    'n_estimators': 100,
     'learning_rate': 0.1
 }
 
