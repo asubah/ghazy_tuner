@@ -17,7 +17,7 @@ def cmssw_part_1():
 
     #TODO: put into part_2 the list of top 15 kernels
 
-    with open('./results/part_1/result.txt', 'r') as f1 and open('./results/part_2/kernels.txt', 'w') as f2:
+    with open('./results/part_1/result.txt', 'r') as f1 , open('./results/part_2/kernels.txt', 'w') as f2:
 
         f2.write(f1.readline())
 
@@ -32,7 +32,7 @@ def cmssw_part_2():
 
     #TODO: put into part_3 the top 5 kernels
 
-    with open('./results/part_2/result.txt', 'r') as f1 and open('./results/part_3/kernels.txt', 'w') as f2:
+    with open('./results/part_2/result.txt', 'r') as f1 , open('./results/part_3/kernels.txt', 'w') as f2:
 
         f2.write(f1.readline())
 
