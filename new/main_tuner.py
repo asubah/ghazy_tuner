@@ -1,4 +1,4 @@
-import argparse
+# import argparse
 import opentuner
 from opentuner import ConfigurationManipulator
 from opentuner import IntegerParameter
@@ -146,7 +146,10 @@ class CMSSWTuner(MeasurementInterface):
 
         '''
 
-        data = f'{self.tp[ctr]} '
+        mytime = self.tp[ctr]
+        ctr += 1
+
+        data = f'{mytime} '
         for kernel in self.kernels:
             data += f"{cfg[kernel] }"
 
@@ -157,9 +160,12 @@ class CMSSWTuner(MeasurementInterface):
             f.write(data)
 
 
-        return Result(time=run_result['time'])
+        return Result(time=mytime)#run_result['time'])
 
 if __name__ == '__main__':
-    args = parser.parse_args()
-    CMSSWTuner.main(args)
+    # args = parser.parse_args()
+    # CMSSWTuner.main(args)
+
+    argparser = opentuner.default_argparser()
+    CMSSWTuner..main(argparser.parse_args())
 
