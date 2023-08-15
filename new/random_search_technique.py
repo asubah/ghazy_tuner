@@ -34,20 +34,20 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         manipulator = self.manipulator
         self.configuration = manipulator.random() # random seed
 
-        '''
-        yield self.configuration
+       
+        # yield self.configuration
         
-        params = self.manip.params
+        # params = self.manip.params
 
-        while True:
+        # while True:
 
-            idx = random.randint(1, self.num_of_kernels) - 1
-            new_value = random.randint(params[idx].min_value, params[idx].max_value) * 32
+        #     idx = random.randint(1, self.num_of_kernels) - 1
+        #     new_value = random.randint(params[idx].min_value, params[idx].max_value) * 32
 
-            self.configuration[params[idx].name] = new_value
+        #     self.configuration[params[idx].name] = new_value
 
-            yield self.configuration
-        '''
+        #     yield self.configuration
+        
 
         while True:
 
