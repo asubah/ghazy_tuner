@@ -8,8 +8,6 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
         #TODO: Get the number of kernels and put it in a variable
         self.num_of_kernels = 31
-        self.manip = self.manipulator
-        self.configuration = self.manip.random() # random seed
 
 
 
@@ -32,6 +30,9 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
 
     def main_generator(self):
+
+        manipulator = self.manipulator
+        self.configuration = manipulator.random() # random seed
 
         '''
         yield self.configuration
