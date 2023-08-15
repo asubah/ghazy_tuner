@@ -22,32 +22,54 @@ parser.add_argument('--repeats', type=str, default="3",
 
 '''
 
+base_dir = ''
+kernels = []
+
+with open('./results/info.txt', 'r') as f:
+    base_dir += f.readline().strip()
+
+
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+tp = df['throughput']
+tp = tp.values.tolist()
+
+
+with open('results/' + base_dir + '/kernels.txt', 'r') as file:
+
+    kernels = []
+
+    for line in file:
+
+        kernels.append(line.strip())
+
 
 class CMSSWTuner(MeasurementInterface):
     
-    def __init__(self):
+    # def __init__(self):
 
-        self.base_dir = ''
-        self.kernels = []
+    #     self.base_dir = ''
+    #     self.kernels = []
 
-        with open('./results/info.txt', 'r') as f:
-            self.base_dir += f.readline().strip()
+    #     with open('./results/info.txt', 'r') as f:
+    #         self.base_dir += f.readline().strip()
 
         
-        import pandas as pd
+    #     import pandas as pd
 
-        df = pd.read_csv('data.csv')
-        self.tp = df['throughput']
-        self.tp = self.tp.values.tolist()
+    #     df = pd.read_csv('data.csv')
+    #     self.tp = df['throughput']
+    #     self.tp = self.tp.values.tolist()
 
 
-        with open('results/' + self.base_dir + '/kernels.txt', 'r') as file:
+    #     with open('results/' + self.base_dir + '/kernels.txt', 'r') as file:
 
-            self.kernels = []
+    #         self.kernels = []
 
-            for line in file:
+    #         for line in file:
 
-                self.kernels.append(line.strip())
+    #             self.kernels.append(line.strip())
 
 
     def manipulator(self):
