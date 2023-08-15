@@ -167,5 +167,5 @@ if __name__ == '__main__':
     # CMSSWTuner.main(args)
 
     argparser = opentuner.default_argparser()
-    CMSSWTuner..main(argparser.parse_args())
+    CMSSWTuner.main(argparser.parse_args())
 
