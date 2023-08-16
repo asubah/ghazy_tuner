@@ -12,7 +12,7 @@ def cmssw_part_1():
 
     # subprocess.run(['python3', 'main_tuner.py', '--test-limit=1000', '-t=Random_Search_Technique'])
     subprocess.run(['python3', 'main_tuner.py', '--test-limit=230724', '-t=Random_Search_Technique'])
-    subprocess.run(['python3', 'xgb_ml.py', 'resluts/part_1', '100'])
+    subprocess.run(['python3', 'xgb_ml.py', 'results/part_1', '100'])
 
 
     #TODO: put into part_2 the list of top 15 kernels

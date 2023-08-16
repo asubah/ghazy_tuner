@@ -1,0 +1,16 @@
+findClus
+kernel_find_ntuplets
+kernelLineFit3
+clusterChargeCut
+getHits
+fishbone
+kernel_connect
+kernel_fastDuplicateRemover
+kernel_earlyDuplicateRemover
+kernel_fillHitDetIndices
+kernelLineFit4
+calibDigis
+RawToDigi_kernel
+kernel_tripletCleaner
+kernel_fillMultiplicity
+kernel_countMultiplicity

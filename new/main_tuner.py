@@ -167,6 +167,7 @@ class CMSSWTuner(MeasurementInterface):
             f.write(results)
 
         '''
+        global ctr
 
         mytime = self.tp[ctr]
         ctr += 1

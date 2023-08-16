@@ -49,6 +49,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
         #     yield self.configuration
         
+        global ctr
 
         while True:
 
