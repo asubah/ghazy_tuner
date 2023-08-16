@@ -5,6 +5,7 @@ ctr = -1
 
 class Random_Search_Technique(technique.SequentialSearchTechnique):
     def __init__(self):
+        super(Random_Search_Technique, self).__init__()
 
         #TODO: Get the number of kernels and put it in a variable
         self.num_of_kernels = 31
