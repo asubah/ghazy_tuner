@@ -171,6 +171,8 @@ class CMSSWTuner(MeasurementInterface):
         global kernel
         global tp
 
+        print('\nrun 1')
+
         mytime = tp[ctr]
         ctr += 1
 
@@ -180,6 +182,8 @@ class CMSSWTuner(MeasurementInterface):
 
         data = data.strip() #to remove any spaces at the end
         data += '\n'
+
+        print('\nrun 2')
 
         print(f'\n\n{data}\n\n')
 
@@ -193,6 +197,9 @@ if __name__ == '__main__':
     # args = parser.parse_args()
     # CMSSWTuner.main(args)
 
+    print('\nmain 1')
     argparser = opentuner.default_argparser()
+    print('\nmain 2')
     CMSSWTuner.main(argparser.parse_args())
+    print('\nmain 3')
 
