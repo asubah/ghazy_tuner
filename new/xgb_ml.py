@@ -12,7 +12,7 @@ file_path = argv[1]
 
 df = pd.read_csv(file_path + '/data.csv')
 
-X = df.drop(columns=['throughput'])#, 'Unnamed: 0'])
+X = df.drop(columns=['throughput'], axis=1)#, 'Unnamed: 0'])
 y = df['throughput']
 
 #part 2: using xgb to determine the most important parameters
