@@ -171,17 +171,17 @@ class CMSSWTuner(MeasurementInterface):
         global kernel
         global tp
 
-        mytime = self.tp[ctr]
+        mytime = tp[ctr]
         ctr += 1
 
         data = f'{mytime} '
-        for kernel in self.kernels:
+        for kernel in kernels:
             data += f"{cfg[kernel] }"
 
         data = data.strip() #to remove any spaces at the end
         data += '\n'
 
-        with open('results/' + self.base_dir + '/data.csv', 'a') as f:
+        with open('results/' + base_dir + '/data.csv', 'a') as f:
             f.write(data)
 
 
