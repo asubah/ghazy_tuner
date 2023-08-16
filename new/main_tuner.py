@@ -168,6 +168,8 @@ class CMSSWTuner(MeasurementInterface):
 
         '''
         global ctr
+        global kernel
+        global tp
 
         mytime = self.tp[ctr]
         ctr += 1
