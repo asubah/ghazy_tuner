@@ -181,6 +181,8 @@ class CMSSWTuner(MeasurementInterface):
         data = data.strip() #to remove any spaces at the end
         data += '\n'
 
+        print(f'\n\n{data}\n\n')
+
         with open('results/' + base_dir + '/data.csv', 'a') as f:
             f.write(data)
 
