@@ -43,7 +43,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         print(f"\n\nconfig.data['findClus'] = {config.data['findClus']}\n\n")
 
 
-        print(f"\n\nconfig values: {dir(config.data.value)}\n\n")
+        print(f"\n\nconfig values: {dir(config.data.values)}\n\n")
 
        
         # yield self.configuration
@@ -66,6 +66,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
             ctr += 1
             for (kernel, param) in zip(self.kernels, self.kernel_params[ctr]):
 
+                # config.data[kernel] = param
                 config[kernel] = param
             
             #yield self.configuration
