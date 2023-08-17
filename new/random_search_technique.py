@@ -62,32 +62,25 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         #     self.configuration[params[idx].name] = new_value
 
         #     yield self.configuration
-        
-        ctr = 0
 
         print(f'\nsize of kernel params = {len(self.kernel_params)}\n\n')
 
         while True:
-            
-            for (kernel, param) in zip(self.kernels, self.kernel_params[ctr]):
 
-                # print(f"(kernel, param) = ({kernel}, {param})")
-                if ctr < 230724 - 1:
+            for param in self.kernel_params:
 
-                    config.data[kernel] = param
-                else:
-                    break
-                    
-                # config[kernel] = param
+                ctr = 0
+                while ctr < 31:
 
-            # print(ctr)
+                    config.data[self.kernels[ctr]] = param[ctr]
 
-            ctr += 1
+                    ctr += 1
+                
+                self.yield_nonblocking(config)
             
             #yield self.configuration
             
             # config = driver.get_configuration(config)
-            self.yield_nonblocking(config)
 
             # print('\ngood?\n')
 
