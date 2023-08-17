@@ -72,7 +72,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
             for (kernel, param) in zip(self.kernels, self.kernel_params[ctr]):
 
                 # print(f"(kernel, param) = ({kernel}, {param})")
-                if ctr < 230724:
+                if ctr < 230724 - 1:
 
                     config.data[kernel] = param
                 else:
