@@ -11,7 +11,7 @@ def cmssw_part_1():
 
 
     # subprocess.run(['python3', 'main_tuner.py', '--test-limit=1000', '-t=Random_Search_Technique'])
-    x = subprocess.run(['python3', 'main_tuner.py', '--test-limit=230724', '-t=Random_Search_Technique'])
+    x = subprocess.run(['python3', 'main_tuner.py', '--test-limit=230723', '-t=Random_Search_Technique'])
     print(f"\n\n{x}\n\n")
     subprocess.run(['python3', 'xgb_ml.py', 'results/part_1', '100'])
 
