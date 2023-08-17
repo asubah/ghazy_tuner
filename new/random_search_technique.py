@@ -39,6 +39,10 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
         print(f"\n\nconfig: {dir(config.data)}\n\n")
         print(f"\n\nconfig iter: {dir(config.data['findClus'])}\n\n")
+
+        print(f"\n\nconfig.data['findClus'] = {config.data['findClus']}\n\n")
+
+
         print(f"\n\nconfig values: {dir(config.data.value)}\n\n")
 
        
