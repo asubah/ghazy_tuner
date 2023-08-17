@@ -1,7 +1,6 @@
 from opentuner.search import technique
 import random
 
-ctr = -1
 
 class Random_Search_Technique(technique.SequentialSearchTechnique):
     def __init__(self):
@@ -64,15 +63,18 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
         #     yield self.configuration
         
-        global ctr
+        ctr = 0
 
         while True:
 
-            ctr += 1
             for (kernel, param) in zip(self.kernels, self.kernel_params[ctr]):
+
+                print(f"(kernel, param) = ({kernel}, {param})")
 
                 config.data[kernel] = param
                 # config[kernel] = param
+
+            ctr += 1
             
             #yield self.configuration
             
