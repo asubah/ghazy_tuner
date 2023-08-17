@@ -37,6 +37,8 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         # manipulator.random()
         config = driver.get_configuration(manipulator.random()) # random seed
 
+        print(f"\n\nconfig: {dir(config)}\n\n")
+
        
         # yield self.configuration
         

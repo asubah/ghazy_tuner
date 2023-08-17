@@ -136,6 +136,8 @@ class CMSSWTuner(MeasurementInterface):
 
     def run(self, desired_result, input, limit):
 
+        print('\nrun 0')
+
         cfg = desired_result.configuration.data
 
         '''
