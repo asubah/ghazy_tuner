@@ -74,6 +74,8 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
                 config.data[kernel] = param
                 # config[kernel] = param
 
+            print(ctr)
+
             ctr += 1
             
             #yield self.configuration
