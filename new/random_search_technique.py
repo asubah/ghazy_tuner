@@ -67,13 +67,10 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
         # while True:
 
-        i = 1
-
         for param in self.kernel_params:
 
             ctr = 0
-
-            print(f'\n========== Round {i} ==========\n')
+            print(f'\n\ncurrent param = {param}\n\n')
 
             while ctr < 31:
 
@@ -81,7 +78,6 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
                 ctr += 1
 
-            i += 1
             
             #self.yield_nonblocking(config)
             yield config

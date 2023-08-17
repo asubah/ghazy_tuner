@@ -136,6 +136,8 @@ class CMSSWTuner(MeasurementInterface):
 
     def run(self, desired_result, input, limit):
 
+        print(f'\n========== Round {ctr + 1} ==========\n')
+
         print('\nrun 0')
 
         cfg = desired_result.configuration.data
