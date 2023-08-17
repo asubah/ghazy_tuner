@@ -33,7 +33,9 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
     def main_generator(self):
 
         manipulator = self.manipulator
-        self.configuration = manipulator.random() # random seed
+        driver = self.driver
+        # manipulator.random()
+        self.configuration = driver.get_configuration(manipulator.random()) # random seed
 
        
         # yield self.configuration
@@ -58,7 +60,10 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
                 self.configuration[kernel] = param
             
-            yield self.configuration
+            #yield self.configuration
+            
+            self.configuration = driver.get_configuration(self.configuration)
+            self.yield_nonblocking(self.configuration)
 
  
 technique.register(Random_Search_Technique())
