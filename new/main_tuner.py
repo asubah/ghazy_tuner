@@ -136,6 +136,8 @@ class CMSSWTuner(MeasurementInterface):
 
     def run(self, desired_result, input, limit):
 
+
+        global ctr
         print(f'\n========== Round {ctr + 1} ==========\n')
 
         print('\nrun 0')
@@ -173,7 +175,6 @@ class CMSSWTuner(MeasurementInterface):
             f.write(results)
 
         '''
-        global ctr
         global kernel
         global tp
 
