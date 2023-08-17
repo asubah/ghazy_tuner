@@ -66,16 +66,13 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         ctr = 0
 
         while True:
+            
+            for (kernel, param) in zip(self.kernels, self.kernel_params[ctr]):
 
-            try:
-                for (kernel, param) in zip(self.kernels, self.kernel_params[ctr]):
+                # print(f"(kernel, param) = ({kernel}, {param})")
 
-                    # print(f"(kernel, param) = ({kernel}, {param})")
-
-                    config.data[kernel] = param
-                    # config[kernel] = param
-            except:
-                pass
+                config.data[kernel] = param
+                # config[kernel] = param
 
             # print(ctr)
 
@@ -85,6 +82,8 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
             
             # config = driver.get_configuration(config)
             self.yield_nonblocking(config)
+
+            print('\ngood?\n')
 
  
 technique.register(Random_Search_Technique())
