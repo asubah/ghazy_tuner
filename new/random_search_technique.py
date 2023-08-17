@@ -37,13 +37,13 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         # manipulator.random()
         config = driver.get_configuration(manipulator.random()) # random seed
 
-        print(f"\n\nconfig: {dir(config.data)}\n\n")
-        print(f"\n\nconfig iter: {dir(config.data['findClus'])}\n\n")
+        # print(f"\n\nconfig: {dir(config.data)}\n\n")
+        # print(f"\n\nconfig iter: {dir(config.data['findClus'])}\n\n")
 
-        print(f"\n\nconfig.data['findClus'] = {config.data['findClus']}\n\n")
+        # print(f"\n\nconfig.data['findClus'] = {config.data['findClus']}\n\n")
 
 
-        print(f"\n\nconfig values: {dir(config.data.values)}\n\n")
+        # print(f"\n\nconfig values: {dir(config.data.values)}\n\n")
 
        
         # yield self.configuration
@@ -66,8 +66,8 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
             ctr += 1
             for (kernel, param) in zip(self.kernels, self.kernel_params[ctr]):
 
-                # config.data[kernel] = param
-                config[kernel] = param
+                config.data[kernel] = param
+                # config[kernel] = param
             
             #yield self.configuration
             
