@@ -182,7 +182,7 @@ class CMSSWTuner(MeasurementInterface):
 
         data = f'{mytime} '
         for kernel in kernels:
-            data += f"{cfg[kernel] }"
+            data += f"{cfg[kernel]} "
 
         data = data.strip() #to remove any spaces at the end
         data += '\n'

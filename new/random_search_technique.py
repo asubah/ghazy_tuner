@@ -67,21 +67,25 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
         # while True:
 
+        i = 1
+
         for param in self.kernel_params:
 
             ctr = 0
+
+            print(f'\n========== Round {i} ==========\n')
+
             while ctr < 31:
 
                 config.data[self.kernels[ctr]] = param[ctr]
 
                 ctr += 1
+
+            i += 1
             
-            self.yield_nonblocking(config)
+            #self.yield_nonblocking(config)
             yield config
             
-            # config = driver.get_configuration(config)
-
-            # print('\ngood?\n')
 
  
 technique.register(Random_Search_Technique())
