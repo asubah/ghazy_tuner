@@ -37,6 +37,8 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         # manipulator.random()
         config = driver.get_configuration(manipulator.random()) # random seed
 
+        print(f'\n\nfirst params = {self.kernel_params[0]}\n\n')
+
         # print(f"\n\nconfig: {dir(config.data)}\n\n")
         # print(f"\n\nconfig iter: {dir(config.data['findClus'])}\n\n")
 
