@@ -65,20 +65,19 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
         print(f'\nsize of kernel params = {len(self.kernel_params)}\n\n')
 
-        while True:
+        # while True:
 
-            for param in self.kernel_params:
+        for param in self.kernel_params:
 
-                ctr = 0
-                while ctr < 31:
+            ctr = 0
+            while ctr < 31:
 
-                    config.data[self.kernels[ctr]] = param[ctr]
+                config.data[self.kernels[ctr]] = param[ctr]
 
-                    ctr += 1
-                
-                self.yield_nonblocking(config)
+                ctr += 1
             
-            #yield self.configuration
+            self.yield_nonblocking(config)
+            yield config
             
             # config = driver.get_configuration(config)
 
