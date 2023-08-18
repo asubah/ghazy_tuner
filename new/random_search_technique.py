@@ -78,11 +78,11 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
                 ctr += 1
 
-            for key in config.data:
-                print(f'\n\nkey = {key}\t', sep='')
-                print(f"dict value = {config.data[key]}\n")
+            # for key in config.data:
+            #     print(f'\n\nkey = {key}\t', sep='')
+            #     print(f"dict value = {config.data[key]}\n")
 
-            print('\n\n')
+            # print('\n\n')
 
             
             #self.yield_nonblocking(config)

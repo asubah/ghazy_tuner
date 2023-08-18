@@ -138,9 +138,9 @@ class CMSSWTuner(MeasurementInterface):
 
 
         global ctr
-        print(f'\n========== Round {ctr + 1} ==========\n')
+        # print(f'\n========== Round {ctr + 1} ==========\n')
 
-        print('\nrun 0')
+        # print('\nrun 0')
 
         cfg = desired_result.configuration.data
 
@@ -178,7 +178,7 @@ class CMSSWTuner(MeasurementInterface):
         global kernel
         global tp
 
-        print('\nrun 1')
+        # print('\nrun 1')
 
         mytime = tp[ctr]
         ctr += 1
@@ -190,7 +190,9 @@ class CMSSWTuner(MeasurementInterface):
         data = data.strip() #to remove any spaces at the end
         data += '\n'
 
-        print('\nrun 2')
+        # print('\nrun 2')
+
+        print(cfg)
 
         print(f'\n\n{data}\n\n')
 
