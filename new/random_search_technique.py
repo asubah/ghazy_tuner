@@ -84,7 +84,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
             # print('\n\n')
 
-            
+            driver.get_configuration(config)
             #self.yield_nonblocking(config)
             yield config
             
