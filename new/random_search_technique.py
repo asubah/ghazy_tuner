@@ -36,10 +36,10 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         # manipulator.random()
         config = driver.get_configuration(manipulator.random()) # random seed
 
-        print(f'\n\nfirst params = {self.kernel_params[0]}\n\n')
-        print(f'\n\nkernels = {self.kernels}\n\n')
+        # print(f'\n\nfirst params = {self.kernel_params[0]}\n\n')
+        # print(f'\n\nkernels = {self.kernels}\n\n')
 
-        print(f'\n\nsize of kernel params = {len(self.kernel_params[0])}\t\tsize of kernels = {len(self.kernels)}\n\n')
+        # print(f'\n\nsize of kernel params = {len(self.kernel_params[0])}\t\tsize of kernels = {len(self.kernels)}\n\n')
 
         # print(f"\n\nconfig: {dir(config.data)}\n\n")
         # print(f"\n\nconfig iter: {dir(config.data['findClus'])}\n\n")
@@ -63,7 +63,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
         #     yield self.configuration
 
-        print(f'\nsize of kernel params = {len(self.kernel_params)}\n\n')
+        # print(f'\nsize of kernel params = {len(self.kernel_params)}\n\n')
 
         # while True:
 
@@ -77,6 +77,12 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
                 config.data[self.kernels[ctr]] = param[ctr]
 
                 ctr += 1
+
+            for key in config.data:
+                print(f'\n\nkey = {key}\t', sep='')
+                print(f"dict value = {config.data[key]}\n")
+
+            print('\n\n')
 
             
             #self.yield_nonblocking(config)
