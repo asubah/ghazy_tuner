@@ -70,7 +70,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
         for param in self.kernel_params:
 
             ctr = 0
-            print(f'\n\ncurrent param = {param}\n\n')
+            # print(f'\n\ncurrent param = {param}\n\n')
 
             while ctr < 31:
 
