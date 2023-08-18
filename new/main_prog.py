@@ -10,9 +10,9 @@ def cmssw_part_1():
         f.write('throughput findClus RawToDigi_kernel kernelLineFit3 kernelLineFit4 kernel_connect getHits kernel_find_ntuplets fishbone clusterChargeCut calibDigis countModules kernelFastFit3 kernelFastFit4 kernelFastFit5 kernelLineFit5 kernel_fillHitDetIndices kernel_mark_used finalizeBulk kernel_earlyDuplicateRemover kernel_countMultiplicity kernel_fillMultiplicity kernel_checkOverflows initDoublets kernel_classifyTracks kernel_fishboneCleaner kernel_fastDuplicateRemover kernel_countHitInTracks kernel_fillHitInTracks kernel_tripletCleaner kernel_doStatsForHitInTracks kernel_doStatsForTracks\n')
 
 
-    # subprocess.run(['python3', 'main_tuner.py', '--test-limit=1000', '-t=Random_Search_Technique'])
-    x = subprocess.run(['python3', 'main_tuner.py', '--test-limit=230724', '-t=Random_Search_Technique'])
-    print(f"\n\n{x}\n\n")
+    subprocess.run(['python3', 'main_tuner.py', '--test-limit=10000', '-t=Random_Search_Technique'])
+    # x = subprocess.run(['python3', 'main_tuner.py', '--test-limit=230724', '-t=Random_Search_Technique'])
+    # print(f"\n\n{x}\n\n")
     subprocess.run(['python3', 'xgb_ml.py', 'results/part_1', '100'])
 
 
