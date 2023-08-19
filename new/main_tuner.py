@@ -189,7 +189,7 @@ class CMSSWTuner(MeasurementInterface):
 
         #data = data.strip() #to remove any spaces at the end
         #data += '\n'
-        data[-1] = '\n'
+        data[len(data) - 1] = '\n'
 
         # print('\nrun 2')
 
