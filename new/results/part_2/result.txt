@@ -1,2 +1,5 @@
 findClus
 kernel_find_ntuplets
+fishbone
+clusterChargeCut
+calibDigis
