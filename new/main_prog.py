@@ -36,7 +36,7 @@ def cmssw_part_2():
         f1.write(header)
 
     subprocess.run(['python3', 'main_tuner.py', '--test-limit=300', '-t=Random_Search_Technique'])
-    subprocess.run(['python3', 'xgb_ml.py', 'results/part_2', '20'])
+    subprocess.run(['python3', 'xgb_ml.py', 'results/part_2', '30'])
 
     with open('./results/part_2/result.txt', 'r') as f1 , open('./results/part_3/top_5_kernels.txt', 'w') as f2:
 
