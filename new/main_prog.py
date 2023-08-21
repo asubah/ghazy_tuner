@@ -36,7 +36,7 @@ def cmssw_part_2():
         f1.write(header)
 
     subprocess.run(['python3', 'main_tuner.py', '--test-limit=300', '-t=Random_Search_Technique'])
-    subprocess.run(['python3', 'xgb_ml.py', 'resluts/part_2', '20'])
+    subprocess.run(['python3', 'xgb_ml.py', 'results/part_2', '20'])
 
     with open('./results/part_2/result.txt', 'r') as f1 , open('./results/part_3/top_5_kernels.txt', 'w') as f2:
 
@@ -47,6 +47,10 @@ def cmssw_part_2():
 if __name__ == '__main__':
 
     cmssw_part_1()
+
+    print('\n\nPart one of the program is done. The files result.txt and data.csv have been produced in results/part_1\n\n')
+
     cmssw_part_2()
 
+    print('\n\nPart one of the program is done. The files result.txt, data.csv and kernels.txt have been produced in results/part_2\n\n')
     print(f'\n\nThe top 5 kernels are in results/part_3\n\n')
