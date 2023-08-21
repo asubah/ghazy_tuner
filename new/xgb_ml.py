@@ -31,8 +31,8 @@ params = {
 xgb_model = xgb.train(params, data_matrix, num_boost_round=nbr)
 
 xgb_dict = xgb_model.get_score(importance_type='weight')
-xgb_dict = dict(sorted(xgb_dict.items(), key=lambda item: item[1]))
-xgb_dict = dict(reversed(list(xgb_dict.items())))
+# xgb_dict = dict(sorted(xgb_dict.items(), key=lambda item: item[1]))
+# xgb_dict = dict(reversed(list(xgb_dict.items())))
 
 #part 3: Exporting the data into a certain format to use later
 

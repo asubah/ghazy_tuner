@@ -4,6 +4,8 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
     def __init__(self):
         super(Random_Search_Technique, self).__init__()
 
+        self.num_of_kernels = 0
+
         import pandas as pd
 
         df = pd.read_csv('data.csv')
@@ -20,6 +22,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
             for line in file:
 
                 self.kernels.append(line.strip())
+                self.num_of_kernels += 1
 
 
     def main_generator(self):
@@ -32,7 +35,7 @@ class Random_Search_Technique(technique.SequentialSearchTechnique):
 
             ctr = 0
 
-            while ctr < 31:
+            while ctr < self.num_of_kernels:
 
                 config.data[self.kernels[ctr]] = param[ctr]
 
