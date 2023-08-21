@@ -28,8 +28,8 @@ def cmssw_part_2():
 
         header = 'throughput'
 
-        for line in f1:
-            header += ',' + line
+        for line in f2:
+            header += ',' + line.strip()
         
         header += '\n'
 
