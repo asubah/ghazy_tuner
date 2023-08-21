@@ -24,6 +24,17 @@ def cmssw_part_2():
 
         file.write('part_2')
 
+    with open('./results/part_2/data.csv', 'w') as f1, open('./results/part_2/kernels.txt', 'r') as f2:
+
+        header = 'throughput'
+
+        for line in f1:
+            header += ',' + line
+        
+        header += '\n'
+
+        f1.write(header)
+
     subprocess.run(['python3', 'main_tuner.py', '--test-limit=300', '-t=Random_Search_Technique'])
     subprocess.run(['python3', 'xgb_ml.py', 'resluts/part_2', '20'])
 
